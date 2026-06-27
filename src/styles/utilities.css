@@ -1,0 +1,31 @@
+.container-custom{
+
+    width:min(100% - 2rem,var(--container));
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    padding-block:7rem;
+
+}
+
+.text-gradient{
+
+    background:linear-gradient(
+
+        90deg,
+
+        #2563EB,
+
+        #60A5FA
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}

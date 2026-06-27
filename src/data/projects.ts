@@ -1,0 +1,52 @@
+import inventory from "../assets/projects/Inventario.png";
+import fitness from "../assets/projects/fitness.png";
+
+export const projects = [
+  {
+    id: 1,
+
+    title: "Sistema de Gestión de Inventarios",
+
+    description:
+      "Aplicación Full Stack para administrar productos, categorías, ventas e inventario con autenticación y roles.",
+
+    image: inventory,
+
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+    ],
+
+    github: "#",
+
+    demo: "#",
+
+    featured: true,
+  },
+
+  {
+    id: 2,
+
+    title: "Aplicación Fitness",
+
+    description:
+      "Aplicación móvil para gestionar rutinas, ejercicios y categorías con autenticación y persistencia de datos.",
+
+    image: fitness,
+
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+    ],
+
+    github: "#",
+
+    demo: "#",
+
+    featured: true,
+  },
+];

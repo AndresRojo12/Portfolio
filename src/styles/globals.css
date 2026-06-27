@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@import "./variables.css";
+@import "./animations.css";
+@import "./utilities.css";
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    background:var(--background);
+
+    color:var(--foreground);
+
+    font-family:var(--font-sans);
+
+    overflow-x:hidden;
+
+}

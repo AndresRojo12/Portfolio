@@ -1,17 +1,17 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-interface Props{
-    children:ReactNode;
+import { Navbar } from "@/components/layout/Navbar";
+
+interface Props {
+  children: ReactNode;
 }
 
-export default function MainLayout({children}:Props){
+export function MainLayout({ children }: Props) {
+  return (
+    <>
+      <Navbar />
 
-    return(
-        <main>
-
-            {children}
-
-        </main>
-    )
-
+      <main>{children}</main>
+    </>
+  );
 }
