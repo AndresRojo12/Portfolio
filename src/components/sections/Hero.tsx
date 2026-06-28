@@ -31,13 +31,13 @@ const Hero = () => {
             <p className="mt-8 text-cyan-400">Hola, soy</p>
 
             <h1 className="mt-3 text-7xl font-black">
-              {hero.title}
+              Andres Rojo
               <br />
             </h1>
+            <p className="mt-8 text-3xl text-slate-300">Full Stack Developer</p>
 
-            <h2 className="mt-6 text-3xl text-slate-300">
-              Full Stack Developer
-            </h2>
+            <h2 className="mt-6 text-3xl text-slate-300">{hero.title}</h2>
+
 
             <p className="mt-8 max-w-xl leading-9 text-slate-400">
               {hero.description}
