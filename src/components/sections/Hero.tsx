@@ -4,7 +4,7 @@ import StatusBadge from "../ui/StatusBadge";
 import HeroImage from "../ui/HeroImage";
 import Button from "../ui/Button";
 import SocialLinks from "../ui/SocialLinks";
-import { siteConfig } from "../../config/site";
+import { hero } from "../../data/hero";
 
 const Hero = () => {
   return (
@@ -31,9 +31,8 @@ const Hero = () => {
             <p className="mt-8 text-cyan-400">Hola, soy</p>
 
             <h1 className="mt-3 text-7xl font-black">
-              Andrés
+              {hero.title}
               <br />
-              Rojo
             </h1>
 
             <h2 className="mt-6 text-3xl text-slate-300">
@@ -41,14 +40,15 @@ const Hero = () => {
             </h2>
 
             <p className="mt-8 max-w-xl leading-9 text-slate-400">
-              Desarrollo aplicaciones web y móviles modernas, APIs robustas y
-              soluciones escalables para empresas, startups y emprendedores.
+              {hero.description}
             </p>
 
             <div className="mt-10 flex gap-5">
-              <Button>Ver proyectos</Button>
+              <Button href="proyectos">Ver proyectos</Button>
 
-              <Button variant="secondary">Descargar CV</Button>
+              <Button variant="secondary" href="contacto">
+                Descargar CV
+              </Button>
             </div>
 
             <SocialLinks />

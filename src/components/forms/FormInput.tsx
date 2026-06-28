@@ -1,30 +1,22 @@
 import type { FieldError } from "react-hook-form";
 
-interface Props {
-
+type Props = {
   label: string;
 
   error?: FieldError;
-
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-const FormInput = ({
-  label,
-  error,
-  ...props
-}: Props) => {
 
+const FormInput = ({ label, error, ...props }: Props) => {
+  const inputId = props.id ?? props.name;
   return (
-
     <div>
-
-      <label className="mb-2 block font-medium">
-
+      <label htmlFor={inputId} className="mb-2 block font-medium">
         {label}
-
       </label>
 
       <input
+        id={inputId}
         {...props}
         className="
           w-full
@@ -40,20 +32,9 @@ const FormInput = ({
         "
       />
 
-      {error && (
-
-        <p className="mt-2 text-sm text-red-400">
-
-          {error.message}
-
-        </p>
-
-      )}
-
+      {error && <p className="mt-2 text-sm text-red-400">{error.message}</p>}
     </div>
-
   );
-
 };
 
 export default FormInput;

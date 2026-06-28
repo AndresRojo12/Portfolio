@@ -11,25 +11,29 @@ import WhyMe from "./components/sections/WhyMe";
 import BackgroundEffects from "./components/layout/BackgroundEffects";
 import Footer from "./components/sections/Footer";
 import SEO from "./components/seo/SEO";
+import Contact from "./components/sections/Contact";
 function App() {
   return (
-    <main className="bg-[#030712] min-h-screen text-white">
-      <SEO/>
+    <>
+      <SEO />
       <BackgroundEffects />
-      <Navbar />
-      <Hero />
-      <SectionDivider />
-      <Services />
-      <About />
-      <SectionDivider />
-      <Projects />
-      <Experience />
-      <SectionDivider />
-      <Process />
-      <Stack />
-      <WhyMe />
+      <main className="bg-[#030712] min-h-screen text-white">
+        <Navbar />
+        <Hero />
+        <SectionDivider />
+        <Services />
+        <About />
+        <SectionDivider />
+        <Projects />
+        <Experience />
+        <SectionDivider />
+        <Process />
+        <Stack />
+        <WhyMe />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

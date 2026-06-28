@@ -8,9 +8,8 @@ interface Props {
 const Card = ({ children }: Props) => {
   return (
     <motion.div
-      whileHover={{
-        y: -8,
-        scale: 1.02,
+      transition={{
+        duration: 0.25,
       }}
       className="
         rounded-3xl

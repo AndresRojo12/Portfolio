@@ -6,6 +6,7 @@ const SocialLinks = () => {
       {socialLinks.map(({ icon: Icon, href, label }) => (
         <a
           key={label}
+          title={label}
           href={href}
           target="_blank"
           rel="noopener noreferrer"

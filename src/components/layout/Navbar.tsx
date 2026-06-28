@@ -54,6 +54,7 @@ const Navbar = () => {
                 smooth
                 duration={500}
                 spy
+                hashSpy
                 offset={-80}
                 activeClass="text-cyan-400"
                 className="cursor-pointer text-slate-300 transition hover:text-cyan-400"

@@ -1,35 +1,21 @@
 import type { FieldError } from "react-hook-form";
 
-interface Props {
+type Props = {
+  label: string;
 
-  label:string;
-
-  error?:FieldError;
-
+  error?: FieldError;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-const FormTextarea = ({
-  label,
-  error,
-  ...props
-}:Props)=>{
-
-  return(
-
+const FormTextarea = ({ label, error, ...props }: Props) => {
+  const inputId = props.id ?? props.name;
+  return (
     <div>
-
-      <label className="mb-2 block">
-
-        {label}
-
-      </label>
+      <label htmlFor={inputId} className="mb-2 block">{label}</label>
 
       <textarea
-
+        id={inputId}
         {...props}
-
         rows={7}
-
         className="
           w-full
           rounded-xl
@@ -44,20 +30,9 @@ const FormTextarea = ({
         "
       />
 
-      {error && (
-
-        <p className="mt-2 text-red-400">
-
-          {error.message}
-
-        </p>
-
-      )}
-
+      {error && <p className="mt-2 text-red-400">{error.message}</p>}
     </div>
-
   );
-
 };
 
 export default FormTextarea;
