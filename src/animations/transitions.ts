@@ -1,7 +1,6 @@
-export const transition = {
+import type { Transition } from "framer-motion";
 
-    duration:.6,
-
-    ease:"easeOut"
-
-}
+export const transition: Transition = {
+  duration: 0.6,
+  ease: [0.16, 1, 0.3, 1],
+};

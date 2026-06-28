@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "Andrés Rojo",
 
+  shortName: "AR",
+
   role: "Full Stack Developer",
 
   portfolio: "https://www.andresrojo.dev",
@@ -12,8 +14,7 @@ export const siteConfig = {
   linkedin: "https://linkedin.com/in/usuario",
 
   hero: {
-    title:
-      "Transformo ideas en aplicaciones web y móviles.",
+    title: "Transformo ideas en aplicaciones web y móviles.",
 
     subtitle:
       "Desarrollador Full Stack especializado en React, React Native, Node.js, TypeScript y PostgreSQL.",
