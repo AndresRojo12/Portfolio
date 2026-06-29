@@ -1,18 +1,20 @@
-import Navbar from "./components/layout/Navbar";
-import Hero from "./components/sections/Hero";
-import Services from "./components/sections/Services";
-import About from "./components/sections/About";
-import Projects from "./components/sections/Projects";
-import Experience from "./components/sections/Experience";
-import Process from "./components/sections/Process";
-import SectionDivider from "./components/ui/SectionDivider";
-import Stack from "./components/sections/Stack";
-import WhyMe from "./components/sections/WhyMe";
-import BackgroundEffects from "./components/layout/BackgroundEffects";
-import Footer from "./components/sections/Footer";
-import SEO from "./components/seo/SEO";
-import Contact from "./components/sections/Contact";
 import { lazy, Suspense } from "react";
+const Navbar = lazy(() => import("./components/layout/Navbar"));
+import Hero from "./components/sections/Hero";
+const Services = lazy(() => import("./components/sections/Services"));
+const About = lazy(() => import("./components/sections/About"));
+const Projects = lazy(() => import("./components/sections/Projects"));
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Process = lazy(() => import("./components/sections/Process"));
+const SectionDivider = lazy(() => import("./components/ui/SectionDivider"));
+const Stack = lazy(() => import("./components/sections/Stack"));
+const WhyMe = lazy(() => import("./components/sections/WhyMe"));
+const BackgroundEffects = lazy(
+  () => import("./components/layout/BackgroundEffects"),
+);
+const Footer = lazy(() => import("./components/sections/Footer"));
+const SEO = lazy(() => import("./components/seo/SEO"));
+const Contact = lazy(() => import("./components/sections/Contact"));
 
 function App() {
   return (
