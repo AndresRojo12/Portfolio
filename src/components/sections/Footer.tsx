@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-slate-800 py-20">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
           <div>
             <Logo />
 
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8 text-sm text-slate-500 md:flex-row">
+        <div className="mt-12flexflex-colitems-centergap-4border-tborder-slate-800pt-8text-centertext-smtext-slate-500md:flex-rowmd:justify-between">
           <p>
             © {new Date().getFullYear()} Andrés Rojo. Todos los derechos
             reservados.

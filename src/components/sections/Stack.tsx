@@ -9,7 +9,7 @@ const Stack = () => {
   return (
     <section
       id="stack"
-      className="py-32"
+      className="py-24 md:py-32"
     >
       <Container>
 
@@ -20,7 +20,7 @@ const Stack = () => {
           centered
         />
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
 
           {stack.map((item) => (
 

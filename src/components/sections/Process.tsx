@@ -5,7 +5,7 @@ const Process = () => {
   return (
     <section
       id="process"
-      className="py-32"
+      className="py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-6">
 
@@ -23,7 +23,7 @@ const Process = () => {
           escalabilidad y una excelente experiencia para el usuario.
         </p>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
 
           {process.map((step) => (
 

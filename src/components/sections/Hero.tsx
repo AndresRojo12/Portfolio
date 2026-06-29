@@ -23,30 +23,29 @@ const Hero = () => {
           backgroundSize: "70px 70px",
         }}
       />
-      <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6">
-        <div className="grid w-full items-center gap-16 lg:grid-cols-2">
+      <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6 pt-28 pb-16">
+        <div className="grid w-full items-center gap-14 lg:grid-cols-2">
           <motion.div>
             <StatusBadge />
 
             <p className="mt-8 text-cyan-400">Hola, soy</p>
 
-            <h1 className="mt-3 text-7xl font-black">
+            <h1 className="mt-4 text-5xl font-black leading-tight sm:text-6xl lg:text-7xl">
               Andres Rojo
               <br />
             </h1>
             <p className="mt-8 text-3xl text-slate-300">Full Stack Developer</p>
 
-            <h2 className="mt-6 text-3xl text-slate-300">{hero.title}</h2>
+            <h2 className="mt-5 text-xl text-slate-300 sm:text-2xl lg:text-3xl">{hero.title}</h2>
 
-
-            <p className="mt-8 max-w-xl leading-9 text-slate-400">
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-400 sm:text-lg">
               {hero.description}
             </p>
 
-            <div className="mt-10 flex gap-5">
-              <Button href="proyectos">Ver proyectos</Button>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button className="w-full sm:w-auto" href="proyectos">Ver proyectos</Button>
 
-              <Button variant="secondary" href="contacto">
+              <Button className="w-full sm:w-auto" variant="secondary" href="contacto">
                 Descargar CV
               </Button>
             </div>

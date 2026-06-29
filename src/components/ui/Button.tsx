@@ -5,6 +5,8 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
   href?: string;
   download?: boolean;
+  className?: string;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -12,6 +14,8 @@ const Button = ({
   variant = "primary",
   href,
   download,
+  className = "",
+  onClick,
 }: ButtonProps) => {
   const base =
     "inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition-all duration-300";
@@ -28,8 +32,8 @@ const Button = ({
     return (
       <a
         href={href}
-        className={`${base} ${variants[variant]}`}
         download={download}
+        className={`${base} ${variants[variant]} ${className}`}
       >
         {children}
       </a>
@@ -37,7 +41,10 @@ const Button = ({
   }
 
   return (
-    <button className={`${base} ${variants[variant]}`}>
+    <button
+      onClick={onClick}
+      className={`${base} ${variants[variant]} ${className}`}
+    >
       {children}
     </button>
   );

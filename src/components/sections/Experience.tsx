@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-32"
+      className="py-24 md:py-32"
     >
       <div className="mx-auto max-w-6xl px-6">
 
@@ -23,7 +23,7 @@ const Experience = () => {
           impacto real.
         </p>
 
-        <div className="mt-20 space-y-20">
+        <div className="mt-16 space-y-12">
 
           {experience.map((item) => (
 

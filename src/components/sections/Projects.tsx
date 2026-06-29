@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-32"
+      className="py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-6">
 
@@ -21,7 +21,7 @@ const Projects = () => {
           Estos proyectos reflejan mi experiencia desarrollando aplicaciones web y móviles con tecnologías modernas, enfocadas en rendimiento, escalabilidad y una excelente experiencia de usuario.
         </p>
 
-        <div className="mt-20 grid gap-10">
+        <div className="mt-16 space-y-10">
 
           {projects.map((project) => (
 

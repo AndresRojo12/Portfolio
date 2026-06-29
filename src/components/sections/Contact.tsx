@@ -16,7 +16,7 @@ const Contact = () => {
         centered
       />
 
-      <div className="mt-20 grid gap-16 lg:grid-cols-2">
+      <div className="mt-16 grid gap-10 lg:grid-cols-2">
         <div>
           <h3 className="text-3xl font-bold">¿Por qué trabajar conmigo?</h3>
 
@@ -70,7 +70,7 @@ const Contact = () => {
             border
             border-slate-800
             bg-slate-900/60
-            p-8
+            p-6 md:p-8
           "
         >
           <ContactForm />

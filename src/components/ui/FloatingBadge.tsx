@@ -16,7 +16,7 @@ const FloatingBadge = ({ icon: Icon, title, className }: Props) => {
         duration: 4,
         ease: "easeInOut",
       }}
-      className={`absolute flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/90 px-4 py-2 backdrop-blur ${className}`}
+      className={`absolute hidden lg:flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/90 px-4 py-2 backdrop-blur ${className}`}
     >
       <Icon className="text-cyan-400 text-xl" />
 
