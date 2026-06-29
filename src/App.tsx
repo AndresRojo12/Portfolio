@@ -12,25 +12,29 @@ import BackgroundEffects from "./components/layout/BackgroundEffects";
 import Footer from "./components/sections/Footer";
 import SEO from "./components/seo/SEO";
 import Contact from "./components/sections/Contact";
+import { lazy, Suspense } from "react";
+
 function App() {
   return (
     <>
       <SEO />
       <BackgroundEffects />
       <main className="bg-[#030712] min-h-screen text-white">
-        <Navbar />
-        <Hero />
-        <SectionDivider />
-        <Services />
-        <About />
-        <SectionDivider />
-        <Projects />
-        <Experience />
-        <SectionDivider />
-        <Process />
-        <Stack />
-        <WhyMe />
-        <Contact />
+        <Suspense fallback={null}>
+          <Navbar />
+          <Hero />
+          <SectionDivider />
+          <Services />
+          <About />
+          <SectionDivider />
+          <Projects />
+          <Experience />
+          <SectionDivider />
+          <Process />
+          <Stack />
+          <WhyMe />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </>
