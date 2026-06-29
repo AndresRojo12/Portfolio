@@ -1,4 +1,4 @@
-import profile from "../../assets/images/andres.jpg";
+import profile from "../../assets/images/andres.webp";
 
 import FloatingBadge from "./FloatingBadge";
 
