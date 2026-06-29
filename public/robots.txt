@@ -1,0 +1,6 @@
+# robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://andres-rojo.onrender.com/sitemap.xml
