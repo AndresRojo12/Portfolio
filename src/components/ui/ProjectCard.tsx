@@ -26,6 +26,8 @@ const ProjectCard = ({
     >
       <div className="overflow-hidden">
         <img
+          loading="lazy"
+          decoding="async"
           src={image}
           alt={title}
           className="w-fullrounded-2xlobject-cover transition duration-500 group-hover:scale-105"

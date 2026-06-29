@@ -22,6 +22,8 @@ const About = () => {
           <img
             src={profile}
             alt="Andrés Rojo"
+            loading="lazy"
+            decoding="async"
             className="w-fullmax-h-[650px]rounded-3xlborderborder-slate-800object-covershadow-2xl"
           />
         </div>

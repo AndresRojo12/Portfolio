@@ -15,7 +15,7 @@ const HeroImage = () => {
         <img
           src={profile}
           className="h-[300px]w-fullrounded-[24px] object-coversm:h-[420px]lg:h-[520px]"
-          loading="eager"
+          loading="lazy"
           decoding="async"
           alt="Fotografia de Andres Rojo"
         />
