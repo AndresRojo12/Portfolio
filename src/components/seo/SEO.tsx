@@ -10,15 +10,19 @@ const SEO = ({
   title,
   description,
 }: SEOProps) => {
+
   const pageTitle = title
     ? `${title} | ${siteConfig.name}`
     : `${siteConfig.name} | ${siteConfig.role}`;
 
   const pageDescription =
-    description ?? siteConfig.hero.subtitle;
+    description ?? siteConfig.description;
 
   return (
     <Helmet>
+
+      <html lang="es" />
+
       <title>{pageTitle}</title>
 
       <meta
@@ -28,23 +32,32 @@ const SEO = ({
 
       <meta
         name="author"
-        content={siteConfig.name}
+        content={siteConfig.author}
       />
 
       <meta
         name="keywords"
-        content="
-        Full Stack Developer,
-        React,
-        React Native,
-        Node.js,
-        Express,
-        TypeScript,
-        PostgreSQL,
-        Desarrollador Web,
-        Colombia,
-        Portafolio
-        "
+        content={siteConfig.keywords.join(", ")}
+      />
+
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+
+      <meta
+        name="theme-color"
+        content="#030712"
+      />
+
+      <link
+        rel="canonical"
+        href={siteConfig.portfolio}
+      />
+
+      <meta
+        property="og:type"
+        content="website"
       />
 
       <meta
@@ -58,8 +71,8 @@ const SEO = ({
       />
 
       <meta
-        property="og:type"
-        content="website"
+        property="og:url"
+        content={siteConfig.portfolio}
       />
 
       <meta
@@ -68,14 +81,35 @@ const SEO = ({
       />
 
       <meta
-        property="og:url"
-        content={siteConfig.portfolio}
+        property="og:locale"
+        content="es_CO"
+      />
+
+      <meta
+        property="og:site_name"
+        content={siteConfig.name}
       />
 
       <meta
         name="twitter:card"
         content="summary_large_image"
       />
+
+      <meta
+        name="twitter:title"
+        content={pageTitle}
+      />
+
+      <meta
+        name="twitter:description"
+        content={pageDescription}
+      />
+
+      <meta
+        name="twitter:image"
+        content={`${siteConfig.portfolio}/og-image.png`}
+      />
+
     </Helmet>
   );
 };
