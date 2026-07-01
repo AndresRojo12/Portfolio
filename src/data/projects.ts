@@ -20,9 +20,9 @@ export const projects = [
       "PostgreSQL",
     ],
 
-    github: "#",
+    github: "https://github.com/AndresRojo12/App_Facturation",
 
-    demo: "#",
+    demo: "https://andresrojo12.github.io/market-pro-inventory-system/",
 
     featured: true,
   },
@@ -43,9 +43,9 @@ export const projects = [
       "Node.js",
     ],
 
-    github: "#",
+    github: "https://github.com/AndresRojo12/Men_Women_Gym",
 
-    demo: "#",
+    demo: "https://andresrojo12.github.io/men-women-gym/",
 
     featured: true,
   },
