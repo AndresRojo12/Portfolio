@@ -1,14 +1,12 @@
 import ServiceCard from "../ui/ServiceCard";
 import { services } from "../../data/services";
 import SectionHeader from "../ui/SectionHeader";
-import Container from "../layout/Container";
+import Section from "../layout/Section";
 
 const Services = () => {
   return (
-    <>
-      <section>
-        <Container>
-          <SectionHeader
+    <Section id="services">
+      <SectionHeader
             eyebrow="Servicios"
             title="¿Cómo puedo ayudarte?"
             description="Desarrollo soluciones digitales modernas, escalables y enfocadas en resultados para empresas, emprendedores y startups."
@@ -22,9 +20,7 @@ const Services = () => {
               ))}
             </div>
           </div>
-        </Container>
-      </section>
-    </>
+    </Section>
   );
 };
 

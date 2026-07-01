@@ -4,10 +4,11 @@ import SkillBar from "../ui/SkillBar";
 
 import { skills } from "../../data/skills";
 import SectionHeader from "../ui/SectionHeader";
+import Section from "../layout/Section";
 
 const About = () => {
   return (
-    <>
+    <Section id="about">
       <SectionHeader
         eyebrow="Sobre mí"
         title="Más que escribir código, construyo soluciones."
@@ -75,7 +76,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </Section>
   );
 };
 
