@@ -5,8 +5,6 @@ import Button from "../ui/Button";
 
 import { benefits } from "../../data/benefits";
 import { siteConfig } from "../../config/site";
-import SocialLinks from "../ui/SocialLinks";
-
 
 const WhyMe = () => {
   return (
@@ -25,9 +23,7 @@ const WhyMe = () => {
           ))}
         </div>
 
-        <div
-          className="mt-32 rounded-[32px] border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-slate-900 p-8 text-center md:p-12"
-        >
+        <div className="mt-32 rounded-[32px] border border-cyan-500/20 bg-gradient-to-r from-cyan-500/10 to-slate-900 p-8 text-center md:p-12">
           <h2 className="text-4xl font-black">
             ¿Tienes una idea o un proyecto?
           </h2>
