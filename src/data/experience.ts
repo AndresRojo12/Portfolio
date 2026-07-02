@@ -28,11 +28,15 @@ export const experience = [
     technologies: [
       "React Native",
       "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "TypeORM",
     ],
   },
 
   {
-    year: "2024",
+    year: "2026",
 
     title: "Sistema de Inventarios",
 
@@ -43,8 +47,10 @@ export const experience = [
 
     technologies: [
       "React",
-      "Express",
+      "Python",
+      "FastAPI",
       "PostgreSQL",
+      "Electron",
     ],
   },
 ];

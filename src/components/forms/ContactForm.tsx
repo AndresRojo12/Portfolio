@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -12,6 +13,11 @@ import {
 import { sendEmail } from "../../services/emailService";
 
 const ContactForm = () => {
+  const [feedback, setFeedback] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const {
     register,
     handleSubmit,
@@ -22,14 +28,25 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    setFeedback({ type: null, message: "" });
+
     try {
       await sendEmail(data);
 
-      alert("Mensaje enviado correctamente.");
+      setFeedback({
+        type: "success",
+        message: "Tu mensaje se ha enviado correctamente. Te responderé pronto.",
+      });
 
       reset();
-    } catch {
-      alert("No fue posible enviar el mensaje.");
+    } catch (error) {
+      setFeedback({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "No fue posible enviar el mensaje. Intenta de nuevo más tarde.",
+      });
     }
   };
 
@@ -63,6 +80,19 @@ const ContactForm = () => {
         error={errors.message}
         {...register("message")}
       />
+
+      {feedback.message && (
+        <p
+          role="status"
+          className={`rounded-xl border px-4 py-3 text-sm ${
+            feedback.type === "success"
+              ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+              : "border-rose-500/30 bg-rose-500/10 text-rose-300"
+          }`}
+        >
+          {feedback.message}
+        </p>
+      )}
 
       <button
         type="submit"

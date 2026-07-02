@@ -1,15 +1,20 @@
-import emailjs from "@emailjs/browser";
 import type { ContactFormData } from "../schemas/contactSchema";
 
-export const sendEmail = async (
-  data: ContactFormData
-) => {
-
-  return emailjs.send(
-    import.meta.env.VITE_EMAIL_SERVICE_ID,
-    import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-    data,
-    import.meta.env.VITE_EMAIL_PUBLIC_KEY
+export async function sendEmail(data: ContactFormData) {
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL}/api/contact`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
   );
 
-};
+  if (!response.ok) {
+    throw new Error("No fue posible enviar el mensaje.");
+  }
+
+  return response.json();
+}

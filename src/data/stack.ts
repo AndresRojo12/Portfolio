@@ -2,7 +2,6 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
-  FaDocker,
   FaGithub,
 } from "react-icons/fa";
 
@@ -16,6 +15,7 @@ import {
   SiMongodb,
   SiPostman,
   SiFigma,
+  SiSwagger,
 } from "react-icons/si";
 
 export const stack = [
@@ -95,12 +95,10 @@ export const stack = [
         icon: FaGithub,
         name: "GitHub",
       },
-
       {
-        icon: FaDocker,
-        name: "Docker",
+        icon: SiSwagger,
+        name: "Swagger",
       },
-
       {
         icon: SiPostman,
         name: "Postman",
