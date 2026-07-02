@@ -7,6 +7,8 @@ interface ButtonProps {
   download?: boolean;
   className?: string;
   onClick?: () => void;
+  target?: string;
+  rel?: string;
 }
 
 const Button = ({
@@ -16,6 +18,8 @@ const Button = ({
   download,
   className = "",
   onClick,
+  target,
+  rel,
 }: ButtonProps) => {
   const base =
     "inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition-all duration-300";
@@ -33,6 +37,8 @@ const Button = ({
       <a
         href={href}
         download={download}
+        target={target}
+        rel={rel}
         className={`${base} ${variants[variant]} ${className}`}
       >
         {children}

@@ -40,6 +40,7 @@ export const services = [
     technologies: [
       "Node.js",
       "Express",
+      "NestJS",
       "PostgreSQL",
     ],
   },

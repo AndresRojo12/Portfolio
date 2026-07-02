@@ -5,16 +5,18 @@ import HeroImage from "../ui/HeroImage";
 import Button from "../ui/Button";
 import SocialLinks from "../ui/SocialLinks";
 import { hero } from "../../data/hero";
+import cv from "../../assets/cv/Andres-Rojo-CV.pdf";
+
 
 const Hero = () => {
   return (
     <section id="inicio" className="relative overflow-hidden">
-      <div className="absolute left-40 top-32 h-72 w-72 rounded-full bg-cyan-500/20 blur-[130px]" />
+      <div className="absolute left-40 top-32 h-72 w-72 rounded-full bg-cyan-500/20 blur-[130px] pointer-events-none" />
 
-      <div className="absolute right-40 bottom-0 h-72 w-72 rounded-full bg-blue-700/20 blur-[140px]" />
+      <div className="absolute right-40 bottom-0 h-72 w-72 rounded-full bg-blue-700/20 blur-[140px] pointer-events-none" />
 
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `
         linear-gradient(#ffffff 1px, transparent 1px),
@@ -43,9 +45,9 @@ const Hero = () => {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Button className="w-full sm:w-auto" href="proyectos">Ver proyectos</Button>
+              <Button className="w-full sm:w-auto" href="#projects">Ver proyectos</Button>
 
-              <Button className="w-full sm:w-auto" variant="secondary" href="contacto">
+              <Button className="w-full sm:w-auto" variant="secondary" href={cv} download>
                 Descargar CV
               </Button>
             </div>
